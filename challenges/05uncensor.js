@@ -4,8 +4,7 @@ function uncensor(infected, remedy) {
   let remedyIndex = 0;
   for (let i = 0; i < infected.length; i++) {
     if (infected[i] === "*") {
-      result += remedy[remedyIndex];
-      remedyIndex++;
+      result += remedy[remedyIndex++];
     } else {
       result += infected[i]
     }
