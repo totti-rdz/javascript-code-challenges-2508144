@@ -1,6 +1,7 @@
 function redistributeWealth(wealth) {
   // Write your code here
-
+  const totalWealth = wealth.reduce((p, c) => p + c, 0)
+  return wealth.fill(totalWealth / wealth.length)
 }
 
 
