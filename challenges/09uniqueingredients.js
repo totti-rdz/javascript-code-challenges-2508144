@@ -1,6 +1,12 @@
 function unique(ingredients) {
   // Write your code here
-
+  const result = []
+  ingredients.map((list) => {
+    list.forEach((elem) => {
+      if (!result.includes(elem)) result.push(elem)
+    });
+  }, [])
+  return result.sort()
 }
 
 
