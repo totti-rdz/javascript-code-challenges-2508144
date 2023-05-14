@@ -1,3 +1,4 @@
+// take a look at branch "solutions" to see an elegant way with array.flat() and Set
 function unique(ingredients) {
   // Write your code here
   const result = []
