@@ -1,6 +1,8 @@
 function isAllPossibilities(array) {
   // Write your code here
-
+  return array.sort().every((elem, index) => {
+    return elem === index
+  })
 }
 
 
