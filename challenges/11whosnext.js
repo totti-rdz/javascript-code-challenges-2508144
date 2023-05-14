@@ -1,5 +1,20 @@
 function whosnext(persons, now) {
   // Write your code here
+  const today = new Date(now);
+
+  persons = persons.map(
+    person => {
+      const diff = new Date(person.birthday) - today;
+      return { 'name': person.name, diff };
+    })
+    .sort((a, b) => a.diff - b.diff)
+
+  if (persons.some(person => person.diff > 0)) { // at least one positive diff
+    persons = persons.filter(person => person.diff > 0); // delete negatives
+  }
+  
+  const result = persons.filter(person => person.diff === persons[0].diff)
+  return (result.length === 1) ? result[0].name : result.map(person => person.name).sort()
 
 }
 
